@@ -1,0 +1,28 @@
+.page-title{margin:2rem 0 1.5rem;font-size:clamp(1.8rem,4vw,2.6rem)}
+.checkout-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:1.5rem;align-items:start}
+.line{display:grid;grid-template-columns:72px 1fr auto auto;gap:.5rem .9rem;align-items:center;padding:.9rem 0;border-bottom:1px solid var(--line)}
+.line img{border-radius:8px;width:72px;height:54px;object-fit:cover}
+.line-info{display:flex;flex-direction:column;min-width:0}
+.line-total{min-width:5.5rem;text-align:right}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.qty output{min-width:2rem;text-align:center;font-weight:600}
+.qty-btn{width:2rem;height:2rem;background:var(--surface-2);color:var(--text);border:0;font-size:1.1rem;cursor:pointer}
+.qty-btn:disabled{opacity:.35;cursor:not-allowed}
+.remove{grid-column:2/-1;justify-self:start;background:none;border:0;color:var(--danger);font:inherit;font-size:.85rem;cursor:pointer;padding:0}
+.empty{display:grid;gap:1rem;justify-items:start;padding:1rem 0;color:var(--muted)}
+.summary{margin:1rem 0 .5rem;display:grid;gap:.4rem}
+.summary div{display:flex;justify-content:space-between}
+.summary dt{color:var(--muted)}.summary dd{margin:0;font-variant-numeric:tabular-nums}
+.summary .grand{padding-top:.7rem;margin-top:.3rem;border-top:1px solid var(--line);font-size:1.25rem;font-weight:700}
+.summary .grand dt{color:var(--text)}
+.done{text-align:center;padding-top:3rem}
+.done-icon{display:grid;place-items:center;width:64px;height:64px;margin:0 auto 1.2rem;border-radius:50%;font-size:2rem;color:#07130d;background:var(--ok)}
+.receipt{text-align:left;margin:1.5rem 0}
+.receipt table{width:100%;border-collapse:collapse;margin-bottom:1rem}
+.receipt th,.receipt td{padding:.5rem 0;border-bottom:1px solid var(--line);text-align:left}
+.receipt td:last-child,.receipt th:last-child{text-align:right}
+.order-id{font-family:ui-monospace,Consolas,monospace;color:var(--orange)}
+.tests{display:grid;gap:.4rem;padding-left:1.2rem}
+.tests .pass::marker{color:var(--ok)}.tests .fail{color:var(--danger)}.tests .skip-t{color:var(--muted)}
+@media (max-width:900px){.checkout-grid{grid-template-columns:1fr}}
+@media (max-width:480px){.line{grid-template-columns:56px 1fr}.line img{width:56px;height:42px}.qty,.line-total{grid-column:2}.line-total{text-align:left}}
