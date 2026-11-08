@@ -3,12 +3,12 @@
   'use strict';
   const KEY = 'kc_cart', MAX_QTY = 10, TAX_RATE = 0.18, FREE_SHIPPING_AT = 5000, SHIPPING = 99;
   const products = [
-    { id: 'kb-aero', name: 'Aero 75 Mechanical Keyboard', price: 4999, image: 'assets/images/keyboard.svg', blurb: 'Hot-swap switches in a milled aluminium case.' },
-    { id: 'hp-pulse', name: 'Pulse ANC Headphones', price: 7499, image: 'assets/images/headphones.svg', blurb: '40-hour battery and adaptive noise cancelling.' },
-    { id: 'ms-orbit', name: 'Orbit Wireless Mouse', price: 1799, image: 'assets/images/mouse.svg', blurb: 'Silent clicks, three-device pairing.' },
-    { id: 'lamp-lumen', name: 'Lumen Desk Lamp', price: 2299, image: 'assets/images/lamp.svg', blurb: 'Warm-to-cool dimming with a USB port.' },
-    { id: 'bag-atlas', name: 'Atlas 20L Backpack', price: 3299, image: 'assets/images/backpack.svg', blurb: 'Water-resistant, padded 16-inch laptop sleeve.' },
-    { id: 'chg-volt', name: 'Volt 65W GaN Charger', price: 1999, image: 'assets/images/charger.svg', blurb: 'Charges a laptop and phone from one plug.' }
+    { id: 'kb-aero', name: 'Aero 75 Mechanical Keyboard', price: 4999, image: 'keyboard.svg', blurb: 'Hot-swap switches in a milled aluminium case.' },
+    { id: 'hp-pulse', name: 'Pulse ANC Headphones', price: 7499,image: 'headphones.svg', blurb: '40-hour battery and adaptive noise cancelling.' },
+    { id: 'ms-orbit', name: 'Orbit Wireless Mouse', price: 1799,image: 'mouse.svg', blurb: 'Silent clicks, three-device pairing.' },
+    { id: 'lamp-lumen', name: 'Lumen Desk Lamp', price: 2299,image: 'lamp.svg', blurb: 'Warm-to-cool dimming with a USB port.' },
+    { id: 'bag-atlas', name: 'Atlas 20L Backpack', price: 3299,image: 'backpack.svg', blurb: 'Water-resistant, padded 16-inch laptop sleeve.' },
+    { id: 'chg-volt', name: 'Volt 65W GaN Charger', price: 1999,image: 'charger.svg', blurb: 'Charges a laptop and phone from one plug.' }
   ];
   const byId = {}; products.forEach((p) => { byId[p.id] = p; });
 
