@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shop | Kestrel</title>
+<meta name="description" content="Kestrel: a secure checkout and registration demo built with HTML, CSS and vanilla JavaScript.">
+<!-- Defence in depth: only same-origin scripts, styles and images may load. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'self'">
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header id="site-header" class="site-header"></header>
+<main id="main">
+<section class="hero container">
+<h1>Gear that earns its desk space.</h1>
+<p class="lead">Six tools we would keep on our own desks, sold through a checkout that rejects bad input instead of trusting it.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="#products"><span class="btn-label">Shop gear</span></a><a class="btn btn-ghost" href="register.html"><span class="btn-label">Create account</span></a></div>
+</section>
+<section id="products" class="container">
+<div class="section-head"><h2>Desk essentials</h2><p class="muted">Prices in INR. 18% GST is added at checkout.</p></div>
+<div id="productGrid" class="grid"></div>
+</section>
+</main>
+<footer id="site-footer" class="site-footer"></footer>
+<script src="js/cart.js" defer></script>
+<script src="js/app.js" defer></script>
+</body>
+</html>

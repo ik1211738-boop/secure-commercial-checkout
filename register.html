@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Create account | Kestrel</title>
+<meta name="description" content="Kestrel: a secure checkout and registration demo built with HTML, CSS and vanilla JavaScript.">
+<!-- Defence in depth: only same-origin scripts, styles and images may load. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'self'">
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header id="site-header" class="site-header"></header>
+<main id="main" class="container auth">
+<section class="auth-copy">
+<h1>Create your account</h1>
+<p class="lead">Every field is checked as you type and again on submit.</p>
+<ul class="rules"><li>Name: letters, spaces, apostrophes, dots and hyphens</li><li>Phone: 10-digit Indian mobile number</li><li>Password: 8+ characters with upper and lower case, a number and a symbol</li></ul>
+</section>
+<form id="registerForm" class="card form" novalidate>
+<div class="field"><label for="fullName">Full name</label><input id="fullName" name="fullName" type="text" autocomplete="name" maxlength="60" required></div>
+<div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required></div>
+<div class="field"><label for="phone">Phone number</label><div class="input-prefix"><span>+91</span><input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="14" required></div></div>
+<div class="field"><label for="password">Password</label><input id="password" name="password" type="password" autocomplete="new-password" maxlength="64" required></div>
+<div class="field"><label for="confirm">Confirm password</label><input id="confirm" name="confirm" type="password" autocomplete="new-password" maxlength="64" required></div>
+<div class="field check"><input id="terms" name="terms" type="checkbox"><label for="terms">I accept the Terms &amp; Conditions of this demo store</label></div>
+<button class="btn btn-primary btn-block" type="submit"><span class="btn-label">Create account</span></button>
+<p class="form-status" role="status" aria-live="polite"></p>
+</form>
+</main>
+<footer id="site-footer" class="site-footer"></footer>
+<script src="js/validation.js" defer></script>
+<script src="js/app.js" defer></script>
+<script src="js/registration.js" defer></script>
+</body>
+</html>

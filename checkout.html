@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Checkout | Kestrel</title>
+<meta name="description" content="Kestrel: a secure checkout and registration demo built with HTML, CSS and vanilla JavaScript.">
+<!-- Defence in depth: only same-origin scripts, styles and images may load. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'self'">
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header id="site-header" class="site-header"></header>
+<main id="main" class="container">
+<h1 class="page-title">Checkout</h1>
+<div class="checkout-grid">
+<section class="card" aria-labelledby="cartTitle">
+<h2 id="cartTitle">Your cart</h2>
+<div id="cartLines"></div>
+<dl class="summary">
+<div><dt>Subtotal</dt><dd id="sumSub">₹0</dd></div>
+<div><dt>GST (18%)</dt><dd id="sumTax">₹0</dd></div>
+<div><dt>Shipping</dt><dd id="sumShip">₹0</dd></div>
+<div class="grand"><dt>Total</dt><dd id="sumTotal">₹0</dd></div>
+</dl>
+<p class="muted small">Shipping is free on orders of ₹5,000 or more.</p>
+</section>
+<form id="checkoutForm" class="card form" novalidate>
+<h2>Delivery details</h2>
+<div class="field"><label for="fullName">Full name</label><input id="fullName" name="fullName" type="text" autocomplete="name" maxlength="60" required></div>
+<div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required></div>
+<div class="field"><label for="phone">Phone number</label><div class="input-prefix"><span>+91</span><input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="14" required></div></div>
+<div class="field"><label for="flat">Flat / house no.</label><input id="flat" name="flat" type="text" autocomplete="off" maxlength="20" required></div>
+<div class="field"><label for="street">Street address</label><input id="street" name="street" type="text" autocomplete="street-address" maxlength="120" required></div>
+<div class="field"><label for="city">City</label><input id="city" name="city" type="text" autocomplete="address-level2" maxlength="40" required></div>
+<div class="field"><label for="state">State / UT</label><select id="state" name="state" autocomplete="address-level1" required><option value="">Select state</option></select></div>
+<div class="field"><label for="pin">PIN code</label><input id="pin" name="pin" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="6" required></div>
+<fieldset class="field options"><legend>Payment method (simulation)</legend>
+<label class="option"><input type="radio" name="payment" value="upi"><span>UPI</span></label>
+<label class="option"><input type="radio" name="payment" value="card"><span>Credit / debit card</span></label>
+<label class="option"><input type="radio" name="payment" value="cod"><span>Cash on delivery</span></label>
+</fieldset>
+<p id="paymentNote" class="muted small">No real payment is processed in this demo.</p>
+<button class="btn btn-primary btn-block" type="submit"><span class="btn-label">Place order</span></button>
+<p class="form-status" role="status" aria-live="polite"></p>
+</form>
+</div>
+</main>
+<footer id="site-footer" class="site-footer"></footer>
+<script src="js/validation.js" defer></script>
+<script src="js/cart.js" defer></script>
+<script src="js/app.js" defer></script>
+<script src="js/checkout.js" defer></script>
+</body>
+</html>
